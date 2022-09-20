@@ -1,2 +1,2 @@
 - Sirui Wang
-- NYU Computer Science and Math Undergraduate
+- Graduated from New York University in May 2022 majoring in Computer Science and Math
