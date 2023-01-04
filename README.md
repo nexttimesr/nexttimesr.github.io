@@ -1,3 +1,3 @@
-- Sirui Wang
+- Sirui Wang (David Wang)
 - Graduated from New York University in May 2022 majoring in Computer Science and Math
 - JOB 🤯
