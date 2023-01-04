@@ -3,4 +3,3 @@
 - [Resume](https://docs.google.com/document/d/15W84SCtoiBs6xRNBdREjYXSb3hacWX_zWlG8k4m5JgU/edit?usp=sharing)
 - [LinkedIn](https://www.linkedin.com/in/sirui-wang12/)
 - Current job count: $\frac{\displaystyle \lim_{x \to 4} \frac{x^2-16}{x+4}}{\displaystyle \lim_{x \to 1} \frac{\ln{x}}{x-1}}$
-- 
