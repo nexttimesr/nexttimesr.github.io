@@ -1,4 +1,5 @@
 - Sirui Wang (David Wang)
+- Software Engineer
 - Graduated from New York University in May 2022 majoring in Computer Science and Math
 - [Resume](https://docs.google.com/document/d/15W84SCtoiBs6xRNBdREjYXSb3hacWX_zWlG8k4m5JgU/edit?usp=sharing)
 - [LinkedIn](https://www.linkedin.com/in/sirui-wang12/)
