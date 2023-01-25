@@ -1,6 +1,0 @@
-- Sirui Wang (David Wang)
-- Software Engineer
-- Graduated from New York University in May 2022 majoring in Computer Science and Math
-- [Resume](https://drive.google.com/file/d/1YMGnueCmdYywnXKzt4hJYqnBbBEIo-gI/view?usp=sharing)
-- [LinkedIn](https://www.linkedin.com/in/sirui-wang12/)
-- Current job count: $\frac{\displaystyle \lim_{x \to 4} \frac{x^2-16}{x+4}}{\displaystyle \lim_{x \to 1} \frac{\ln{x}}{x-1}}$
