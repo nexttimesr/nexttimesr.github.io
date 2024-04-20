@@ -20,7 +20,7 @@ const BackgroundChanger = () => {
             // Set up the interval to change color when isChanging is true
             intervalId = setInterval(() => {
                 setColorIndex(current => (current + 1) % colors.length);
-            }, 500);
+            }, 60000 / 116);
         }
 
         // Cleanup function to clear the interval when isChanging is false or component unmounts
