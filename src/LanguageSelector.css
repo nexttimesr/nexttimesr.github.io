@@ -1,0 +1,24 @@
+/* Language Container: Align to top right */
+.language-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Language Selection - Smaller and Prettier */
+.language-selector {
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.language-selector:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}

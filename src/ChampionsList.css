@@ -1,0 +1,102 @@
+body {
+  background:  #2a5298;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Keep the header styling */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+/* Make the title smaller */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.back-link {
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  width: 120px; /* Match dropdown width */
+  height: 18px; /* Match dropdown height */
+}
+
+.back-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.back-link-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar {
+  font-size: 16px;
+  width: 300px;
+  padding: 7px 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.champion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.champion-table th, .champion-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.champion-table th {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.sortable:hover {
+  background-color: #555;
+}
+
+.search-bar::placeholder {
+  color: #F0FFFF; /* Light grey color for placeholder */
+  opacity: 1; /* Ensures the color is fully applied */
+}
+.champion-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}

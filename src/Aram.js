@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button, Card, CardContent, MenuItem, Select } from "@mui/material";
 import CasinoIcon from "@mui/icons-material/Casino";
 import "./Aram.css";
+import LanguageSelector from "./LanguageSelector";
 
 const LANGUAGES = [
   { code: "en_US", label: "English" },
@@ -38,12 +40,14 @@ const Aram = () => {
   const [allowDuplicates, setAllowDuplicates] = useState(false);
 
   useEffect(() => {
+    document.title = "Aram Champion Randomizer";
     fetch(`https://ddragon.leagueoflegends.com/cdn/15.5.1/data/${language}/champion.json`)
       .then((res) => res.json())
       .then((data) => {
         const champs = Object.values(data.data).map((champ) => ({
           id: champ.id,
           name: champ.name,
+          title: champ.title,
           icon: `https://ddragon.leagueoflegends.com/cdn/15.5.1/img/champion/${champ.image.full}`,
           tags: champ.tags,
         }));
@@ -82,7 +86,14 @@ const Aram = () => {
     return randomChamps;
   };
 
+  const updateTeamContainerBorder = () => {
+    document.querySelectorAll('.team-container').forEach(container => {
+        container.classList.add('has-champions');
+    });
+  }
+
   const randomizeTeams = () => {
+    updateTeamContainerBorder();
     const size = Math.min(parseInt(teamSize) || 1, Math.ceil(champions.length / 2));
     if (allowDuplicates) {
       setTeam1(getRandomChampions(size));
@@ -98,39 +109,12 @@ const Aram = () => {
     <div className="container">
       <div className="header">
   <h1 className="title">Aram Champion Randomizer</h1>
-  <div className="language-container">
-    <Button className="language-button" onClick={() => setLanguage("en_US")}>
-  English
-</Button>
-<Button className="language-button" onClick={() => setLanguage("zh_CN")}>
-  中文
-</Button>
-    <Select
-  value={language}
-  onChange={(e) => setLanguage(e.target.value)}
-  className="language-selector"
-  displayEmpty
-  variant="outlined"
-  sx={{
-    width: 120,  // Adjust width
-    height: 32,  // Adjust height
-    fontSize: "0.8rem",
-    backgroundColor: "rgba(255,255,255,0.2)",
-    color: "white",
-    borderRadius: "5px",
-    "&:hover": {
-      backgroundColor: "rgba(255,255,255,0.4)",
-    },
-  }}
->
-  {LANGUAGES.map((lang) => (
-    <MenuItem key={lang.code} value={lang.code}>
-      {lang.label}
-    </MenuItem>
-  ))}
-</Select>
-
-  </div>
+  <LanguageSelector language={language} setLanguage={setLanguage}/>
+  <div className="champions-list-container">
+  <Link to="/champions-list" className="champions-list-link">
+      Champions List
+    </Link>
+    </div>
 </div>
       <div className="category-buttons">
         {CATEGORIES.map((category) => (
@@ -149,7 +133,7 @@ const Aram = () => {
           className="team-size-input"
           value={teamSize}
           onChange={(e) => setTeamSize(e.target.value.replace(/[^0-9]/g, ""))}
-          placeholder="Enter team size"
+          placeholder=""
           min="1"
         />
         <Button className="randomize-button" onClick={randomizeTeams} variant="contained" color="primary">

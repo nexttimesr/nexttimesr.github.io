@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import TwistedFate from "./TwistedFate";
 import Aram from "./Aram";
+import ChampionsList from "./ChampionsList";
 
 
 
@@ -16,6 +17,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Aram />} />
         <Route path="/tf" element={<TwistedFate />} />
+        <Route path="/champions-list" element={<ChampionsList />} />
       </Routes>
     </Router>
   );
