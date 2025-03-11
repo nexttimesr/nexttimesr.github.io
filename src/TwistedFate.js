@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import pyf from "./pyf.jpg";
 import {motion} from "framer-motion";
-import './App.css';
 
-const BackgroundChanger = () => {
+const TwistedFate = () => {
     // Array of colors to cycle through
     const colors = ['red', 'yellow', 'blue'];
     // State to hold the current color index
@@ -53,4 +52,4 @@ const BackgroundChanger = () => {
     );
 };
 
-export default BackgroundChanger;
+export default TwistedFate;

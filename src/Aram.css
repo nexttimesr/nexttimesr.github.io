@@ -1,0 +1,219 @@
+/* Improved Background */
+body {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Border Around Both Teams */
+.teams-wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 95%;
+  margin: 30px auto;
+  padding: 15px;
+}
+
+/* Make Each Team Display in 3 Rows */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+/* Match Language Buttons to Dropdown Style */
+.language-button {
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/* Keep the header styling */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+/* Make the title smaller */
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Language Container: Align to top right */
+.language-container {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Language Selection - Smaller and Prettier */
+.language-selector {
+  padding: 5px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.language-selector:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Champion Categories */
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 2px solid #007bff;
+  background-color: white;
+  color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.category-button.selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Controls - Same Row */
+.controls {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Team Size Input */
+.team-size-input {
+  width: 50px;
+  padding: 7px 10px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Randomize Button */
+.randomize-button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.randomize-button:hover {
+  background-color: #e68900;
+}
+
+/* Toggle Button */
+.toggle-button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+  color: white !important;
+  background-color: transparent;
+}
+
+.toggle-button.enabled {
+  background-color: #28a745;
+  color: white !important;
+}
+
+.toggle-button.disabled {
+  background-color: #dc3545;
+  color: white !important;
+}
+
+/* Teams Display */
+.teams-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+/* Team Titles */
+.team-title {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* Champion Grid - More Champions Per Row */
+.champion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 5px; /* Smaller gap */
+  max-width: 600px;
+}
+
+/* Adjust champion layout */
+.champion-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  padding: 5px;
+  border: none;
+}
+
+/* Make champions smaller */
+.champion-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+/* Champion name is beside the icon */
+.champion-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
